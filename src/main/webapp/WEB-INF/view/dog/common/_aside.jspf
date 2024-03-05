@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 이 부분에 필요한 CSS와 JavaScript를 추가합니다. -->
+    <style>
+        /* 사이드 바를 고정하는 스타일 */
+        .fixed-sidebar {
+            position: fixed;
+            top: 50px; /* 페이지 상단으로부터의 거리를 조정합니다. */
+            left: 50px; /* 페이지 좌측으로부터의 거리를 조정합니다. */
+            width: 200px; /* 사이드 바의 너비를 조정합니다. */
+            background-color: white; /* 사이드 바의 배경색을 조정합니다. */
+            padding: 10px; /* 사이드 바 내부의 여백을 설정합니다. */
+            border-radius: 5px; /* 사이드 바의 테두리를 둥글게 만듭니다. */
+        }
+    </style>
+</head>
+<body>
+
+<!-- 사이드 바 영역 -->
+<div class="col-2 fixed-sidebar" style="margin-top:30px; margin-left: 30px">
+    <hr>
+    <div class="mt-2">
+        <a href="/jw/dog/gallery/insert"><button class="btn btn-primary mt-4" type="submit" style="padding: 15px 50px; font-size:20px">등록</button></a>
+    </div>
+    <br><hr>
+</div>
+
+</body>
+</html>

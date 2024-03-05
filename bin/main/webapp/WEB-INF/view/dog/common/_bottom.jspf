@@ -1,0 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+
+	<nav class="navbar navbar-expand-sm bg-#000080 fixed-bottom text-white ma" style="background-color: #1c3761; height: 50px;" >
+			<div class="container-fluid">
+				<p style="color: green; font-size: 30px;  margin: 0px; width: 300px;"> MY PET</p>
+				<p class="text-white" style="margin: 0%; text-align: center;"> 주소 : 경기도 수원시 팔달구 인계동 번지 신관 3층 208-5 KR 풍림빌딩 </p>
+			</div>
+	</nav>

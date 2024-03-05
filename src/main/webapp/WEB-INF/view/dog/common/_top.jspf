@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+</html>
+
+	<nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #1c3761">
+		<div class="container-fluid">
+			<ul class="navbar-nav">
+				<a class="navbar-brand mx-5" href="/jw/dog/home"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdakLyX%2FbtsFkVSo075%2FSLRDuGwH5lucF8kv9Z3z4K%2Fimg.png" height="36" width="80px"></a>
+				<li class="nav-item ms-3">
+					<a class="nav-link text-white" href="/jw/dog/home"> 홈</a>
+				</li>
+                <li class="nav-item ms-3">
+                    <a class="nav-link text-white" href="/jw/dog/items/foodlist">상품</a>
+                </li>
+				<li class="nav-item ms-3">
+					<a class="nav-link text-white" href="/jw/dog/board/list">일지</a>
+				</li>
+                <li class="nav-item ms-3">
+					<a class="nav-link text-white" href="/jw/dog/gallery/list">갤러리</a>
+				</li>
+			</ul>	
+				<ul class="navbar-nav" >
+				<div class="ms-auto d-flex">
+				<li class="nav-item ms-3">
+					<c:if test="${empty sessUid}">
+					<a class="nav-link text-white" href="/jw/dog/user/login">로그인</a>
+					</c:if>
+					<c:if test="${not empty sessUid}">
+							<a class="nav-link text-white" href="/jw/dog/user/logout">로그아웃</a>
+					</c:if>
+				</li>
+				<li class="nav-item ms-3">
+					<c:if test="${empty sessUid}">
+					<a class="nav-link text-white" href="/jw/dog/user/register">회원가입</a>
+					</c:if>
+					<c:if test="${not empty sessUid}">
+					</c:if>
+				</li>
+				<li class="nav-item ms-3">
+					<c:if test="${empty sessUid}">
+					</c:if>
+					<c:if test="${not empty sessUid}">
+					<a class="nav-link text-white" href="/jw/dog/user/update?uId=${user.uId}"
+					>내 정보</a>
+					</c:if>
+				</li>
+				</div>
+				</ul>
+			<c:if test="${not empty sessUid}">
+				<span class="navbar-text me-3">${sessUname}님 환영합니다. ${sessBalance} 포인트</span>
+			</c:if>
+		</div>
+	</nav>
